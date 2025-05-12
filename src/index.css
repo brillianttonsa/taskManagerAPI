@@ -1,0 +1,36 @@
+@import 'tailwindcss';
+
+@layer utilities{
+    .flex-center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .flex-column{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@layer components{
+    .container{
+        @apply mx-auto px-2 md:px-4 lg:px-6
+    }
+    .nav-links{
+        @apply text-gray-800 hover:text-emerald-600 transition-colors
+    }
+
+    /* Grouped Styles using Tailwind's @apply for signups */
+    .input-field {
+        @apply mt-1 w-full px-3 py-2 border rounded-md shadow-sm focus:ring-emerald-500 focus:border-emerald-500 sm:text-sm;
+    }
+
+    .input-field.error {
+        @apply border-red-300;
+    }
+
+    .button-primary {
+        @apply w-full py-2 px-4 bg-emerald-600 text-white text-sm font-medium cursor-pointer rounded-md hover:bg-emerald-700 disabled:opacity-50 flex justify-center items-center;
+    }
+
+}
