@@ -64,7 +64,7 @@ function SignUp() {
             setErrors({});
             
             try {
-                const response = await axios.post("http://localhost:2000/api/auth/signup", formData);
+                const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/auth/signup`,formData);
                 console.log(response.data);
                 setSubmitSuccess(true);
                 setFormData({
