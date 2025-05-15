@@ -46,7 +46,7 @@ function SignIn(){
             setIsSubmitting(true)
             try {
                 // Send the form data to the server locally
-                const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/auth/signuin`,formData);                  
+                const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/auth/signin`,formData);                  
                 if (response.status === 200) {
                     console.log("Login successful")
                 }
